@@ -1,14 +1,18 @@
 /* CUSTOM PROPS */
 :root {
+  --color-ocean: #19a1ae;
+  --color-grey: #6b7082;
+  --color-black: #2e3349;
+  --color-white: #fff;
 
-}
+  --color-bg-body: var(--color-ocean);
+  --color-bg-card: var(--color-white);
+  --color-text: var(--color-grey);
+  --color-text-dark: var(--color-black);
+  --color-divider: #e8e9ec;
 
-:root[data-theme="light"] {
-
-}
-
-:root[data-theme="dark"] {
-
+  --card-padding: 24px;
+  --avatar-size: 106px;
 }
 
 
@@ -16,13 +20,17 @@
 body {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 24px;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family: "Kumbh Sans", "Arial", sans-serif;
+  font-size: 0.875rem;
+  line-height: normal;
+  background-color: var(--color-bg-body);
+  background-image: url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: var(--color-text);
 }
 
 img {
@@ -83,6 +91,93 @@ select:-webkit-autofill:focus {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+.card {
+  flex-shrink: 0;
+  max-width: 21.875rem;
+  margin: auto;
+  border-radius: 15px;
+  background-color: var(--color-bg-card);
+  text-align: center;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  height: 140px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  padding: var(--card-padding);
+}
+
+.card__avatar {
+  width: 106px;
+  height: 106px;
+  margin-top: calc(var(--avatar-size) / -2 - var(--card-padding));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+.card__name-age {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+  line-height: normal;
+}
+
+.card__name {
+  font-size: 1.125rem;
+  line-height: normal;
+  color: var(--color-text-dark);
+}
+
+.card__city {
+  margin-bottom: 28px;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+.card__divider {
+  height: 1px;
+  border: 0;
+  margin-left: calc(var(--card-padding) * -1);
+  margin-right: calc(var(--card-padding) * -1);
+  margin-bottom: 24px;
+  background-color: var(--color-divider);
+}
+
+.card__stats-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.card__stats-title {
+  font-size: 0.625rem;
+  line-height: normal;
+  letter-spacing: 0.09375rem;
+}
+
+.card__stats-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-text-dark);
 }
 
 @media

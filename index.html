@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Profile card component</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/reset.css">
@@ -12,6 +17,33 @@
 </head>
 <body>
 
+
+  <main class="card">
+    <img class="card__img" src="img/bg-pattern-card.svg" alt="" width="350" height="140" aria-hidden="true">
+    <div class="card__body">
+      <img class="card__avatar" src="img/avatar.jpg" alt="Victor Crest" width="106" height="106" srcset="img/avatar.jpg 1x, img/avatar@2x.jpg 2x">
+      <div class="card__name-age">
+        <h1 class="card__name">Victor Crest</h1>
+        <span class="card__age">26</span>
+      </div>
+      <div class="card__city">London</div>
+      <hr class="card__divider">
+      <dl class="card__stats-list">
+        <div class="card__stats">
+          <dt class="card__stats-title">Followers</dt>
+          <dd class="card__stats-value">80K</dd>
+        </div>
+        <div class="card__stats">
+          <dt class="card__stats-title">Likes</dt>
+          <dd class="card__stats-value">803K</dd>
+        </div>
+        <div class="card__stats">
+          <dt class="card__stats-title">Photos</dt>
+          <dd class="card__stats-value">1.4K</dd>
+        </div>
+      </dl>
+    </div>
+  </main>
 
 
   <script src="js/main.js"></script>
